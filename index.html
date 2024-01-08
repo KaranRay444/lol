@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      background: #354249;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.9rem;
+      background-color: #283035;
+    }
+
+    nav a {
+      font-size: 1rem;
+      padding: 0.8rem;
+      color: aliceblue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #c72931;
+      transition: all 5ms;
+    }
+
+    .q1 {
+     
+      max-width: 80%;
+      align-content: center;
+      padding: 0.9rem;
+      background-color: #303a40;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      color: white;
+      margin-top: 1rem;
+      margin-right: auto;
+      margin-left: auto;
+      align-items: center;
+    }
+
+    #hamburger-icon {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        font-size: 0.8rem;
+        margin: 0.5rem;
+      }
+
+      #hamburger-icon {
+        display: block;
+      }
+
+      #nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #nav-links.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <nav>
+    <div id="hamburger-icon">&#9776;</div>
+    <div id="nav-links" class="li">
+      <a href="#">HOME</a>
+      <a href="jquery_events.html">Jquery Events</a>
+      <a href="fading_effects.html">Fading Effect</a>
+      <a href="sliding_effect.html">Sliding Effect</a>
+      <a href="rp.html">Registration Page</a>
+    </div>
+  </nav>
+  
+  <div class="q1">VIMAL TORMAL PODDAR BCA COLLEGE</div>
+  <div class="q2">405 WEB DESIGN-2 ASSIGNMENT-1</div>
+
+
+
+  <script>
+    document.getElementById('hamburger-icon').addEventListener('click', function() {
+      document.getElementById('nav-links').classList.toggle('show');
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>jQuery Fading Effects</title>
+    <style>
+        body {
+            background-color: #354249;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        p {
+            max-width: 80%;
+            text-align: justify;
+            background-color: #303a40;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1rem;
+        }
+
+        button {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+        }
+
+        button.fade-in {
+            background-color: #c72931;
+        }
+
+        button.fade-out {
+            background-color: #303a40;
+        }
+
+        button.fade-toggle {
+            background-color: #283035;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 600px) {
+            p {
+                max-width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Nature is the intricate and awe-inspiring tapestry of the natural world that
+        encompasses everything from landscapes and ecosystems to living organisms.
+        It embodies the beauty, balance, and interconnectedness of life on Earth.
+        Nature provides essential resources for human survival,
+        from the air we breathe to the food we eat,
+        and it offers a source of inspiration and rejuvenation.
+    </p>
+    
+    <div class="button-container">
+        <button class="fade-in">Fade In</button>
+        <button class="fade-out">Fade Out</button>
+        <button class="fade-toggle">Fade Toggle</button>
+    </div>
+
+    <script>
+        $("button.fade-in").click(function() {
+            $("p").fadeIn(1000);
+        });
+
+        $("button.fade-out").click(function() {
+            $("p").fadeOut(1000);
+        });
+
+        $("button.fade-toggle").click(function() {
+            $("p").fadeToggle(1000);
+        });
+    </script>
+</body>
+</html>
