@@ -7,7 +7,7 @@
     <title>jQuery Events</title>
     <style>
         body {
-            background-color: #354249;
+            background-color: #3D405B;
             color: white;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -28,19 +28,16 @@
             margin-bottom: 1rem;
         }
 
-        button, input {
+        button {
             margin-top: 1rem;
             padding: 0.8rem;
             border: none;
             border-radius: 0.3rem;
             cursor: pointer;
             color: white;
+            background-color: #c72931;
             transition: background-color 0.3s;
             font-size: 1rem;
-        }
-
-        button {
-            background-color: #c72931;
         }
 
         button:hover {
@@ -50,23 +47,24 @@
         input {
             width: 100%;
             box-sizing: border-box;
+            padding: 0.8rem;
+            margin-top: 1rem;
             border: 1px solid #283035;
             background-color: #283035;
+            color: white;
+            border-radius: 0.3rem;
+            transition: background-color 0.3s;
+            font-size: 1rem;
         }
 
         input:focus {
             background-color: #ff7a7a;
-        }
-
-        @media screen and (min-width: 600px) {
-            p {
-                max-width: 50%;
-            }
+            outline: none;
         }
     </style>
 </head>
 <body>
-    <p>
+    <p id="paragraph1">
         Nature is the intricate and awe-inspiring tapestry of the natural world that
         encompasses everything from landscapes and ecosystems to living organisms.
         It embodies the beauty, balance, and interconnectedness of life on Earth.
@@ -76,52 +74,70 @@
     </p>
     <button class="click">Click Event</button>
     <button class="dblclk">DoubleClick</button>
-    <input type="text" placeholder="Enter name">
 
     <script>
         $(".click").click(function() {
-            $("p").css("color", "red");
+            $("#paragraph1").css("color", "red");
         });
 
         $(".dblclk").dblclick(function() {
-            $("p").css("color", "green");
+            $("#paragraph1").css("color", "green");
+        });
+    </script>
+
+    <p id="paragraph2">
+        Nature is often characterized by its beauty, diversity, and balance. It provides essential resources for life, including clean air, water, and food.
+    </p>
+    <button class="mouseenter">Mouse Enter Event</button>
+    <button class="mouseleave">Mouse Leave Event</button>
+
+    <script>
+        $(".mouseenter").mouseenter(function() {
+            $("#paragraph2").css("color", "blue");
         });
 
-        $("p").mouseenter(function() {
-            alert("Welcome! Mouse enter!");
+        $(".mouseleave").mouseleave(function() {
+            $("#paragraph2").css("color", "yellow");
+        });
+    </script>
+
+    <p id="paragraph3">
+        Nature is a source of inspiration for artists, poets, and scientists alike. Its ever-changing landscapes, from mountains and forests to oceans and deserts,
+    </p>
+    <button class="mousedown">MouseDown Event</button>
+    <button class="mouseup">MouseUp Event</button>
+
+    <script>
+        $(".mousedown").mousedown(function() {
+            $("#paragraph3").text("Mouse down over paragraph!");
         });
 
-        $("p").mouseleave(function() {
-            alert("See you soon! Mouse leave!");
+        $(".mouseup").mouseup(function() {
+            $("#paragraph3").text("Mouse up over paragraph!");
         });
+    </script>
 
-        $("p").mousedown(function() {
-            alert("Mouse down over paragraph!");
-        });
+    <p id="paragraph4">
+        In essence, nature is a dynamic and intricate tapestry that sustains life on Earth, offering both practical resources and intangible benefits that enrich the human experience    </p>
+    <button class="hover">Mouse Hover Event</button>
+    <button class="focus">Focus Event</button>
 
-        $("p").mouseup(function() {
-            alert("Mouse up over p!");
-        });
-
-        $("p").hover(
+    <script>
+        $(".hover").hover(
             function() {
-                alert("You entered paragraph");
+                $("#paragraph4").css("background-color", "#c72931");
             },
             function() {
-                alert("Bye! You now leave paragraph!");
+                $("#paragraph4").css("background-color", "#303a40");
             }
         );
 
-        $("input").focus(function() {
+        $(".focus").focus(function() {
             $(this).css("background-color", "#ff7a7a");
         });
 
-        $("input").blur(function() {
-            $(this).css("background-color", "#c72931");
-        });
-
-        $("p").on("click", function() {
-            $(this).hide();
+        $(".focus").blur(function() {
+            $(this).css("background-color", "#283035");
         });
     </script>
 </body>
