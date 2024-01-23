@@ -1,106 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    html {
-      background: #354249;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Page</title>
+    <style>
+        html {
+            background: #3D405B;
+        }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.9rem;
-      background-color: #283035;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
 
-    nav a {
-      font-size: 1rem;
-      padding: 0.8rem;
-      color: aliceblue;
-      text-decoration: none;
-    }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.9rem;
+            background-color: #283035;
+            width: 100%;
+            box-sizing: border-box;
+        }
 
-    a:hover {
-      text-decoration: underline;
-      color: #c72931;
-      transition: all 5ms;
-    }
+        nav a {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1rem;
+            padding: 0.8rem;
+            color: #c72931;;
+            text-decoration: none;
+            
+        }
 
-    .q1 {
-     
-      max-width: 80%;
-      align-content: center;
-      padding: 0.9rem;
-      background-color: #303a40;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      color: white;
-      margin-top: 1rem;
-      margin-right: auto;
-      margin-left: auto;
-      align-items: center;
-    }
+        a:hover {
+            color: #F2CC8F;
+            text-decoration: underline;
+            transition: all 5ms;
+        }
 
-    #hamburger-icon {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
+        .q-container {
+            max-width: 80%;
+            margin-top: 1rem;
+        }
 
-    @media screen and (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
+        h2.q1 {
+            padding: 0.9rem;
+            background-color: #303a40;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
 
-      nav a {
-        font-size: 0.8rem;
-        margin: 0.5rem;
-      }
+        h3.q2 {
+            padding: 0.5rem;
+            background-color: #303a40;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: white;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+        }
 
-      #hamburger-icon {
-        display: block;
-      }
+        #hamburger-icon {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
 
-      #nav-links {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-      }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: #283035;
+            border: 1px solid #283035;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
 
-      #nav-links.show {
-        display: flex;
-      }
-    }
-  </style>
+        th, td {
+            padding: 1rem;
+            border: 1px solid #283035;
+            text-align: left;
+            color: white;
+        }
+
+        th {
+            background-color: #303a40;
+            color: #c72931;
+        }
+
+        td {
+            background-color: #354249;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+                margin: 0.5rem;
+            }
+
+            #hamburger-icon {
+                display: block;
+                margin-top: 0.5rem;
+            }
+
+            #nav-links {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+            }
+
+            #nav-links.show {
+                display: flex;
+            }
+
+            h2.q1, h3.q2 {
+                font-size: 1.2rem;
+            }
+
+            table {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  
-  <nav>
-    <div id="hamburger-icon">&#9776;</div>
-    <div id="nav-links" class="li">
-      <a href="#">HOME</a>
-      <a href="jquery_events.html">Jquery Events</a>
-      <a href="fading_effects.html">Fading Effect</a>
-      <a href="sliding_effect.html">Sliding Effect</a>
-      <a href="rp.html">Registration Page</a>
+    <nav>
+        <div id="hamburger-icon">&#9776;</div>
+        <div id="nav-links" class="li">
+            <a href="#">HOME</a>
+            <a href="jquery_events.html">Jquery Events</a>
+            <a href="fading_effects.html">Fading Effect</a>
+            <a href="sliding_effect.html">Sliding Effect</a>
+            <a href="rp.html">Registration Page</a>
+        </div>
+    </nav>
+
+    <div class="q-container">
+        <h2 class="q1">VIMAL TORMAL PODDAR BCA COLLEGE</h2>
+        <h3 class="q2">405 WEB DESIGN-2 ASSIGNMENT-1</h3>
     </div>
-  </nav>
-  
-  <div class="q1">VIMAL TORMAL PODDAR BCA COLLEGE</div>
-  <div class="q2">405 WEB DESIGN-2 ASSIGNMENT-1</div>
 
+    <table>
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td>Karan Rajbhar</td>
+            </tr>
+            <tr>
+              <td>Roll No</td>
+              <td>227</td>
+          </tr>
+            <tr>
+                <td>Semester</td>
+                <td>4th</td>
+            </tr>
+            <tr>
+                <td>Class</td>
+                <td>SYBCA - C</td>
+            </tr>
+            <tr>
+              <td>Date of Submission</td>
+              <td>20/01/2024</td>
+          </tr>
+            <tr>
+              <td>Submitted To</td>
+              <td>Prof. Ritu Bhatiya </td>
+          </tr>
+        </tbody>
+    </table>
 
-
-  <script>
-    document.getElementById('hamburger-icon').addEventListener('click', function() {
-      document.getElementById('nav-links').classList.toggle('show');
-    });
-  </script>
-  
+    <script>
+        document.getElementById('hamburger-icon').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
